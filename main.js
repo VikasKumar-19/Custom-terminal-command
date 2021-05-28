@@ -1,3 +1,11 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const helpObj = require('./commands/help');
+const treeObj = require('./commands/tree');
+const organizeObj = require('./commands/organize');
+
 let inpArr = process.argv.slice(2);
 
 // for tree command we need to enter directory path -> node main.js tree "directory_Path"
@@ -7,27 +15,15 @@ let inpArr = process.argv.slice(2);
 let command = inpArr[0]; //this captures which command entered by user (help, organize or tree)
 
 switch(command){
-    case "tree": treeFn(inpArr[1]);
+    case "tree": treeObj.treeKey(inpArr[1]);
         break;
 
-    case "organize": organizeFn(inpArr[1]);
+    case "organize": organizeObj.organizeKey(inpArr[1]);
         break;
 
-    case "help": helpFn();
+    case "help": helpObj.helpKey();
         break;
 
     default:
         console.log("Wrong command entered. Please🙏 enter right command.");
-}
-
-function treeFn(dirPath){
-    console.log("Tree command implemented for" , dirPath);
-}
-
-function organizeFn(dirPath){
-    console.log("organize command implemented for" , dirPath);
-}
-
-function helpFn(){
-    console.log("Help command working");
 }
