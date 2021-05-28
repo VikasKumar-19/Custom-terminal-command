@@ -1,6 +1,6 @@
-# Steps for creating tree, organise and help commands
-## Project Topic: Create your own custom terminal commands
+# Project Topic: Create your own custom terminal commands
 
+## Steps for creating tree, organise and help commands
 1. first we have to know that user can only run these commands by entering it.
 2. So we have to take input from user
 3. we use process.argv to take inputs.
