@@ -1,6 +1,8 @@
 # Project Topic: Create your own custom terminal commands
 
 ## Steps for creating tree, organise and help commands
+Note: Run the main.js using `node main.js <command_name> [dirpath_optional]` to see working of project.
+
 1. first we have to know that user can only run these commands by entering it.
 2. So we have to take input from user
 3. we use process.argv to take inputs.
@@ -17,5 +19,6 @@
         }`
     - we can give any command_name as per our likes.
     - At last we enter the **"npm link"** command in order to make the command global.
+    - Now we can access *commands* in our terminal or cmd and we can use it anywhere we want.
 - You can make your own "package.json" file, you already know how to create one. As this project doesn't require any external packages to be installed so, So I won't be uploading my package.json file as it would be unnecessary.
 - Congratulations!! You just have learned to make your own custom command!
